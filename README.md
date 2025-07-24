@@ -7,11 +7,8 @@ This repository contains the completed tasks for the **CodeSoft Web Development 
 - ✅ **Task 1: Basic Calculator**  
   A simple calculator for basic arithmetic operations.
 
-- ✅ **Task 2: Landing Page**  
-  A modern and responsive landing page with smooth design.
-
-- ✅ **Task 3: Portfolio Website**  
-  A personal portfolio showcasing skills, projects, and contact info.
+-✅ Task 2: Job Board
+A modern, responsive landing page designed for seamless job browsing and clean user experience.
 
 > Add more tasks if applicable.
 
@@ -24,8 +21,7 @@ This repository contains the completed tasks for the **CodeSoft Web Development 
 ## 🌐 Live Demo (Optional)
 
 - [Calculator](#)
-- [Landing Page](#)
-- [Portfolio](#)
+- [Jon Board](#)
 
 ## 📌 About
 
