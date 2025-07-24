@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JobFinder - Find Your Dream Job</title>
+  <link href="https://fonts.googleapis.com/css2?family=Gabarito&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Gabarito', sans-serif;
+    }
+
+    body {
+      background-color: #f5f7fa;
+      color: #333;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #4b6cb7;
+      padding: 15px 60px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    nav img {
+      height: 40px;
+      border-radius: 50%;
+    }
+
+    nav .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
+    nav .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav .nav-links a:hover {
+      color: #e0f3ff;
+    }
+
+    nav .post-job-btn {
+      padding: 10px 20px;
+      background-color: #28a745;
+      border: none;
+      border-radius: 8px;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    nav .post-job-btn:hover {
+      background-color: #218838;
+    }
+
+    .hero {
+      background: url('image.jpg') center/cover no-repeat;
+      padding: 150px 60px 100px;
+      color: white;
+      position: relative;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .hero-overlay {
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 40px;
+      max-width: 600px;
+      border-radius: 10px;
+    }
+
+    .hero h1 {
+      font-size: 60px;
+      margin-bottom: 10px;
+      animation: slideIn 1s ease-in-out;
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 25px;
+      animation: slideIn 1.5s ease-in-out;
+    }
+
+    .hero .upload-btn {
+      padding: 12px 25px;
+      font-size: 16px;
+      background-color: #28a745;
+      border: none;
+      border-radius: 10px;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .hero .upload-btn:hover {
+      background-color: #218838;
+      box-shadow: 0 0 10px aqua;
+    }
+
+    @keyframes slideIn {
+      from {
+        transform: translateX(-100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    .count-display {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .search-bar {
+      background-color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+      padding: 20px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      position: relative;
+      top: -50px;
+      border-radius: 10px;
+      width: 85%;
+      margin: 0 auto;
+      flex-wrap: wrap;
+    }
+
+    .search-bar select {
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      min-width: 150px;
+      font-size: 16px;
+    }
+
+    .search-bar input[type="button"] {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .search-bar input[type="button"]:hover {
+      background-color: #0056b3;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        padding: 20px;
+      }
+      .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+      }
+      .search-bar {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <img src="https://tse4.mm.bing.net/th?id=OIP.cUDsFklhEMMVOj95byVVQAHaHa&pid=Api&P=0&h=180" alt="Logo" />
+      <div class="nav-links">
+        <a href="#">Home</a>
+        <a href="#">Browse Jobs</a>
+        <a href="#">Pages</a>
+        <a href="#">Blog</a>
+        <a href="#">Contact</a>
+        <a href="#">Login</a>
+        <button class="post-job-btn">Post a Job</button>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-overlay">
+      <div class="count-display" id="jobCounter">+0 Jobs Listed</div>
+      <h1>Find Your Dream Job</h1>
+      <p>We provide online instant cash loans with quick approval that suit your term length.</p>
+      <button class="upload-btn">Upload Your Resume</button>
+    </div>
+  </section>
+
+  <section class="search-bar">
+    <select>
+      <option disabled selected>Search Keyword</option>
+      <option>Web Developer</option>
+      <option>Machine Learning</option>
+      <option>AI</option>
+    </select>
+    <select>
+      <option disabled selected>Location</option>
+      <option>Noida</option>
+      <option>Delhi</option>
+      <option>Remote</option>
+    </select>
+    <select>
+      <option disabled selected>Category</option>
+      <option>Full-time</option>
+      <option>Internship</option>
+      <option>Freelance</option>
+    </select>
+    <input type="button" value="Find Job" />
+  </section>
+
+  <script>
+    window.onload = function () {
+      let counter = 0;
+      const target = 1500;
+      const jobCounter = document.getElementById("jobCounter");
+
+      function updateCounter() {
+        if (counter <= target) {
+          jobCounter.textContent = `+${counter} Jobs Listed`;
+          counter += 5;
+          setTimeout(updateCounter, 10);
+        }
+      }
+
+      updateCounter();
+    };
+  </script>
+</body>
+</html>
